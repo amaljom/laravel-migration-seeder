@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    @include('Includes.Header')
+
+    <ol>
+        @foreach($trains as $train)
+            <li>
+                {{$train->id}} - {{$train->company}} - {{$train->train_code}} - {{$train->departure_station}} - {{$train->arrival_time}}
+            </li>
+        @endforeach
+    </ol>
+
 </body>
 </html>
